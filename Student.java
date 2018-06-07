@@ -11,16 +11,18 @@ public class Student {
 	private Long id;
 	private String name;
 	private String passportNumber;
+     private String address;
 
 	public Student() {
 		super();
 	}
 
-	public Student(Long id, String name, String passportNumber) {
+	public Student(Long id, String name, String passportNumber,String address) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.passportNumber = passportNumber;
+           this.address=address
 	}
 
 	public Student(String name, String passportNumber) {
@@ -52,10 +54,19 @@ public class Student {
 	public void setPassportNumber(String passportNumber) {
 		this.passportNumber = passportNumber;
 	}
+     
+      public String setAddress(String address)
+{
+ this.address=address;
+}
+     public void getAddress()
+{
+   return address;
+}
 
 	@Override
 	public String toString() {
-		return String.format("Student [id=%s, name=%s, passportNumber=%s]", id, name, passportNumber);
+		return String.format("Student [id=%s, name=%s, passportNumber=%s, address=%s]", id, name, passportNumber, address);
 	}
 
 }
